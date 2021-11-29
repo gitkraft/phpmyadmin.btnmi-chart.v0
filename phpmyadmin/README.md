@@ -11,7 +11,7 @@ $ helm install my-release bitnami/phpmyadmin
 
 ## Introduction
 
-This chart bootstraps a [phpMyAdmin](https://github.com/bitnami/bitnami-docker-phpmyadmin) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart bootstraps a [phpMyAdmin](https://github.com/bitnami/bitnami-docker-phpmyadmin) deployment on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 Bitnami charts can be used with [Kubeapps](https://kubeapps.com/) for deployment and management of Helm Charts in clusters. This chart has been tested to work with NGINX Ingress, cert-manager, fluentd and Prometheus on top of the [BKPR](https://kubeprod.io/).
 
@@ -218,7 +218,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `networkPolicy.egressRules.customRules`                       | Custom network policy rule                                                                                                     | `{}`    |
 
 
-For more information please refer to the [bitnami/phpmyadmin](http://github.com/bitnami/bitnami-docker-Phpmyadmin) image documentation.
+For more information please refer to the [bitnami/phpmyadmin](https://github.com/bitnami/bitnami-docker-Phpmyadmin) image documentation.
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
@@ -460,3 +460,11 @@ Use the workaround below to upgrade from versions previous to `1.0.0`. The follo
 ```console
 $ kubectl patch deployment phpmyadmin-phpmyadmin --type=json -p='[{"op": "remove", "path": "/spec/selector/matchLabels/chart"}]'
 ```
+
+## Community supported solution
+
+Please, note this Helm chart is a community-supported solution. This means that the Bitnami team is not actively working on new features/improvements nor providing support through GitHub Issues for this Helm chart. Any new issue will stay open for 20 days to allow the community to contribute, after 15 days without activity the issue will be marked as stale being closed after 5 days.
+
+The Bitnami team will review any PR that is created, feel free to create a PR if you find any issue or want to implement a new feature.
+
+New versions are not going to be affected. Once a new version is released in the upstream project, the Bitnami container image will be updated to use the latest version.
