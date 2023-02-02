@@ -1,7 +1,6 @@
 annotations:
   category: Infrastructure
-  licenses: |
-    - Apache-2.0
+  licenses: Apache-2.0
 apiVersion: v2
 appVersion: 5.2.0
 dependencies:
@@ -30,4 +29,4 @@ name: phpmyadmin
 sources:
   - https://github.com/bitnami/containers/tree/main/bitnami/phpmyadmin
   - https://www.phpmyadmin.net/
-version: 10.4.0
+version: 10.4.1
